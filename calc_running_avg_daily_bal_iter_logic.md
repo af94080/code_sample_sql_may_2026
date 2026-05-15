@@ -51,4 +51,4 @@ This takes a running sum of those flags. Because flags only increment on a chang
 - **`group_starting_balances`** uses `row_in_group = 1` to grab just the first row of each group (i.e., the balance at the moment it changed)
 - **`final_avgs`** joins on it to pull in each group's starting balance and the previous group's balance — which is what powers the `daily_running_average_bal` calculation at the end
 
-In short, it's a classic **gaps-and-islands** pattern: turn a stream of values into labeled contiguous segments so you can reason about each stable period as a unit.
+In short, it turns a stream of values into labeled contiguous segments so you can reason about each stable period as a unit.
